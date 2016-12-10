@@ -10,9 +10,8 @@ const server = http.createServer((req, res)=>{
 });
 
 function filtro(req){
-return req.url + " " + req.method;
+	return req.url + " " + req.method;
 }
-
 
 server.listen(port,()=>{
   console.log(`Server running`);
