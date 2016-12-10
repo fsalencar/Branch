@@ -43,7 +43,14 @@ function putGroselha(url){
 	return "a url "+ url + " foi chamada com o metodo put";
 }
 
+function postGroselha(url){
+	return "a url "+ url + " foi chamada com o metodo post";
 
+}
+
+function delGroselha(url){
+	return "a url "+ url + " foi chamada com o metodo delete";
+}
 
 server.listen(port,()=>{
   console.log(`Server running`);
