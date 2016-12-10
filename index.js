@@ -12,6 +12,13 @@ const server = http.createServer((req, res)=>{
 function filtro(req){
 	return req.url + " " + req.method;
 }
+function pullGroselha(){
+
+}
+
+function deleteGroselha(){
+
+}
 
 server.listen(port,()=>{
   console.log(`Server running`);
