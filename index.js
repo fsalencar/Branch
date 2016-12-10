@@ -21,7 +21,7 @@ const server = http.createServer((req, res)=>{
 		break;
 
 		case 'POST':
-		return pullGroselha(req.url)
+		return postGroselha(req.url)
 		break;
 
 		case 'DELETE':
