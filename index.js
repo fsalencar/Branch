@@ -6,8 +6,13 @@ const http = require('http'),
 const server = http.createServer((req, res)=>{
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Teste de Branchs');
+  res.end(groselha(req));
 });
+
+function filtro(req){
+return req.url + " " + req.method;
+}
+
 
 server.listen(port,()=>{
   console.log(`Server running`);
