@@ -1,0 +1,25 @@
+{
+  "name": "teste-branch",
+  "version": "1.0.0",
+  "description": "Testando as branchs do git",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fsalencar/Branch.git"
+  },
+  "keywords": [
+    "git",
+    "branch",
+    "npm",
+    "node"
+  ],
+  "author": "Felipe ALencar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fsalencar/Branch/issues"
+  },
+  "homepage": "https://github.com/fsalencar/Branch#readme"
+}
