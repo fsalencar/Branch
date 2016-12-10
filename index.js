@@ -20,7 +20,7 @@ const server = http.createServer((req, res)=>{
 		return putGroselha(req.url)
 		break;
 
-		case 'PULL':
+		case 'POST':
 		return pullGroselha(req.url)
 		break;
 
