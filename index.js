@@ -13,19 +13,19 @@ const server = http.createServer((req, res)=>{
 		switch (req.method) {
 
 		case 'GET':
-		return getGroselha(req.url)
+		return getGroselha(req.url) + groselhaMaster(req.url)
 		break;
 
 		case 'PUT':
-		return putGroselha(req.url)
+		return putGroselha(req.url)+ groselhaMaster(req.url)
 		break;
 
 		case 'POST':
-		return postGroselha(req.url)
+		return postGroselha(req.url)+ groselhaMaster(req.url)
 		break;
 
 		case 'DELETE':
-		return delGroselha(req.url)
+		return delGroselha(req.url)+ groselhaMaster(req.url)
 		break;
 
 		default:
@@ -50,6 +50,18 @@ function postGroselha(url){
 
 function delGroselha(url){
 	return "a url "+ url + " foi chamada com o metodo delete";
+}
+
+function groselhaMaster(x){
+	let topper = [];
+	for (let i = 0; i<x.length ; i++){
+		if (i % 2==0){
+			topper.push("_par_"+" ")
+		}else {
+			topper.push("_impar_" + " ")
+		}
+	}
+	return topper;
 }
 
 server.listen(port,()=>{
