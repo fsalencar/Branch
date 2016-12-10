@@ -13,6 +13,13 @@ function filtro(req){
 	return req.url + " " + req.method;
 }
 
+function getGroselha(){
+
+}
+function postGroselha(){
+	
+}
+
 server.listen(port,()=>{
   console.log(`Server running`);
 });
