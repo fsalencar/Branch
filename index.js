@@ -9,16 +9,41 @@ const server = http.createServer((req, res)=>{
   res.end(filtro(req));
 });
 
-function filtro(req){
+	function filtro(req){
+		switch (req.method) {
+
+		case 'GET':
+		return getGroselha(req.url)
+		break;
+
+		case 'PUT':
+		return putGroselha(req.url)
+		break;
+
+		case 'PULL':
+		return pullGroselha(req.url)
+		break;
+
+		case 'DELETE':
+		return delGroselha(req.url)
+		break;
+
+		default:
+			return "Deu ruim amiguinho"
+			break;
+	}
 	return req.url + " " + req.method;
 }
-function putGroselha(){
 
+function getGroselha(url){
+	return "a url "+ url + " foi chamada com o metodo get";
 }
 
-function deleteGroselha(){
-
+function putGroselha(url){
+	return "a url "+ url + " foi chamada com o metodo put";
 }
+
+
 
 server.listen(port,()=>{
   console.log(`Server running`);
