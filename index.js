@@ -13,11 +13,17 @@ function filtro(req){
 	return req.url + " " + req.method;
 }
 
-function getGroselha(){
+function getGroselha(url){
+	return "a url "+ url + " foi chamada com o metodo get";
 
 }
-function postGroselha(){
-	
+function postGroselha(url){
+	return "a url "+ url + " foi chamada com o metodo post";
+
+}
+
+function delGroselha(url){
+	return "a url "+ url + " foi chamada com o metodo delete";
 }
 
 server.listen(port,()=>{
